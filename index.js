@@ -24,6 +24,7 @@ async function run() {
             res.send(task);
         });
 
+        // todo post api
         app.post('/todoTask', async (req, res) => {
             const task = req.body;
             const doc = task;
@@ -31,6 +32,7 @@ async function run() {
             res.send(result)
         });
 
+        // this is delete api
         app.delete('/todoTask/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
